@@ -1,0 +1,135 @@
+.footer {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+  margin-top: 4rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .footerContent {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoTitle {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.brandDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 300px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-color);
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+
+.socialLinks a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.linksCol h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.linksCol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linksCol a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.linksCol a:hover {
+  color: var(--primary);
+}
+
+.bottomBar {
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  background-color: var(--bg-color);
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bottomContent {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.bottomContent p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.legalLinks a {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.legalLinks a:hover {
+  color: var(--primary);
+}

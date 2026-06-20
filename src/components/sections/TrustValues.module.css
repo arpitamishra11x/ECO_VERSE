@@ -1,0 +1,55 @@
+.trustSection {
+  padding: 2rem 0 5rem 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trustContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 150px;
+  cursor: default;
+}
+
+@media (min-width: 1024px) {
+  .valueItem {
+    justify-content: center;
+  }
+}
+
+.iconWrapper {
+  color: var(--primary);
+}
+
+.icon {
+  stroke-width: 1.5px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}

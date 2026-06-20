@@ -1,0 +1,110 @@
+.section {
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.titleCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.viewAll {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: opacity 0.2s;
+}
+
+.viewAll:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  padding: 0.5rem 4px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.carousel > * {
+  scroll-snap-align: start;
+}
+
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--white);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 5;
+  border: 1px solid var(--border-color);
+}
+
+.arrowBtn:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrowBtnLeft {
+  left: -20px;
+}
+
+.arrowBtnRight {
+  right: -20px;
+}
+
+@media (max-width: 1024px) {
+  .arrowBtn {
+    display: none; /* Hide arrows on touch devices since they can swipe */
+  }
+}

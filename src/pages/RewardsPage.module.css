@@ -1,0 +1,332 @@
+.rewardsPage {
+  padding: 2rem 0 4rem 0;
+  font-family: var(--font-body);
+}
+
+.rewardsHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rewardsTitle {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.rewardsSubtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.pointsDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, #164229 100%);
+  color: var(--white);
+}
+
+.pointsCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.pointsValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+.pointsLbl {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.levelProgressCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.levelTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.levelTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.levelBadge {
+  padding: 0.35rem 0.75rem;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.levelInstructions {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.xpBar {
+  width: 100%;
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.xpFill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+.xpText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* --- Rewards Store --- */
+.storeSection {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.storeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.storeCard {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.storeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.rewardInfo {
+  margin-bottom: 1.5rem;
+}
+
+.rewardCost {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rewardName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.rewardDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.redeemBtn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.redeemBtn:hover {
+  background: var(--primary-hover);
+}
+
+.redeemBtn:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* --- Missions & Achievements --- */
+.gridTwoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.missionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.missionItem:last-child {
+  border-bottom: none;
+}
+
+.missionInfo {
+  flex: 1;
+}
+
+.missionTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.missionPoints {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.claimBtn {
+  padding: 0.4rem 0.875rem;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.claimedState {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.badgeCard {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.badgeIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(30,91,58,0.1);
+}
+
+.badgeCardName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.badgeCardDesc {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .topRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .gridTwoCol {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,215 @@
+.heroSection {
+  position: relative;
+  padding: 4rem 0 6rem 0;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .heroContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.heroSubTitle {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.heroDesc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 90%;
+  margin-bottom: 1.5rem;
+}
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metricIcon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricText {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricText strong {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.metricText span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Visual Area */
+.heroVisual {
+  position: relative;
+  width: 100%;
+}
+
+.imageWrapper {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.heroImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .heroImage {
+    height: 500px;
+  }
+}
+
+.featuredCard {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-floating);
+  position: relative;
+  margin-top: -3rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+}
+
+@media (min-width: 1024px) {
+  .featuredCard {
+    position: absolute;
+    bottom: -3rem;
+    right: -2rem;
+    width: 380px;
+    margin: 0;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.badgeIcon {
+  fill: var(--primary);
+}
+
+.featuredName {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.featuredStory {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featuredActions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Decorative elements */
+.leafDecorationLeft {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  width: 80px;
+  height: 200px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q40,40 50,100 Q60,160 0,150" fill="%23DFF4E6" opacity="0.5"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.leafDecorationRight {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 100px;
+  height: 250px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg"><path d="M100,50 Q60,40 50,100 Q40,160 100,150" fill="%23DFF4E6" opacity="0.5"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

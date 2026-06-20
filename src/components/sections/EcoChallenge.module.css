@@ -1,0 +1,150 @@
+.challengeSection {
+  padding: 5rem 0;
+  background-color: var(--primary);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background shapes */
+.challengeSection::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 50%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: var(--radius-full);
+}
+
+.challengeContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .challengeContainer {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.challengeTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .challengeTitle {
+    font-size: 3.5rem;
+  }
+}
+
+.challengeDesc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.progressArea {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.progressBarBg {
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+.progressSubtext {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.joinBtn {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.joinBtn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.rewardArea {
+  display: flex;
+  justify-content: center;
+}
+
+.rewardCard {
+  background-color: var(--white);
+  color: var(--text-primary);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+}
+
+.medalWrapper {
+  width: 80px;
+  height: 80px;
+  background-color: var(--accent);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.rewardCard h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.rewardCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}

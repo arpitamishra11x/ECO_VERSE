@@ -1,0 +1,217 @@
+.communitySection {
+  padding: 4rem 0;
+  background-color: var(--bg-color);
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .communityGrid {
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.viewAll {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.discussionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.discussionCard {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discussionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.postMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.postMeta strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.postMeta span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.postTopic {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.postActions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.actionBtn:hover {
+  color: var(--primary);
+}
+
+.joinBtn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .joinBtn {
+    width: auto;
+  }
+}
+
+/* Sidebar Widgets */
+.sidebarArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.widgetCard {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.widgetIconArea {
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.widgetContent h4 {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  margin-bottom: 0.5rem;
+}
+
+.widgetContent p {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.progressContainer {
+  height: 8px;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.progressText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.contributorList {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.contributorList img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--white);
+  margin-left: -10px;
+}
+
+.contributorList img:first-child {
+  margin-left: 0;
+}
+
+.moreContributors {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--white);
+  background-color: var(--accent);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: -10px;
+  z-index: 10;
+}

@@ -1,0 +1,125 @@
+.bar {
+  background: linear-gradient(135deg, var(--accent) 0%, #FAF9F5 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.heading {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metricIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--white);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(30, 91, 58, 0.08);
+}
+
+.metricTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 1100px) {
+  .bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .center {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .right .button {
+    width: 100%;
+    text-align: center;
+  }
+}

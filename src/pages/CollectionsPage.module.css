@@ -1,0 +1,201 @@
+.page {
+  padding: 3rem 0 5rem;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  color: var(--primary);
+}
+
+.tabIndicator {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Collections Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.collectionCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.collectionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.25rem;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: var(--bg);
+}
+
+.collageItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.emptyCollage {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: rgba(45, 106, 79, 0.05);
+}
+
+.collectionInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collectionName {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.itemCount {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+}
+
+/* Create New Card */
+.createCard {
+  background: rgba(45, 106, 79, 0.03);
+  border: 2px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--primary);
+  transition: all 0.2s;
+}
+
+.createCard:hover {
+  background: rgba(45, 106, 79, 0.08);
+  border-color: var(--primary-light);
+}
+
+.createIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wishlist Grid */
+.wishlistGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  grid-column: 1 / -1;
+}
+
+.emptyState h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .wishlistGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .wishlistGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .wishlistGrid { grid-template-columns: 1fr; }
+}

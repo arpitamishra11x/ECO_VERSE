@@ -1,0 +1,82 @@
+.page {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumbLink {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--primary);
+}
+
+.breadcrumbSep {
+  color: var(--text-secondary);
+  opacity: 0.4;
+  font-size: 0.75rem;
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-width: 0; /* Prevents flex children from overflowing */
+}
+
+.impactBarWrapper {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  .content {
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,520 @@
+.page {
+  padding: 2rem 0 4rem;
+  min-height: 100vh;
+}
+
+/* Welcome Header */
+.welcomeCard {
+  background: linear-gradient(135deg, var(--primary) 0%, #1b4332 100%);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.welcomeLeft h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.welcomeLeft p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.welcomeBadge {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.statIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconWrap.revenue { background: linear-gradient(135deg, #d4edda, #a8d5ba); color: var(--primary); }
+.statIconWrap.orders { background: linear-gradient(135deg, #cce5ff, #99ccff); color: #1a73e8; }
+.statIconWrap.products { background: linear-gradient(135deg, #fff3cd, #ffe69c); color: #b8860b; }
+.statIconWrap.rating { background: linear-gradient(135deg, #f8d7da, #f1aeb5); color: #dc3545; }
+
+.statInfo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.statInfo p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.statTrend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.statTrend.up { color: var(--primary); }
+.statTrend.down { color: #dc3545; }
+
+/* Two Column Layout */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Chart Card */
+.chartCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chartHeader h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.chartPeriod {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.chartArea {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 200px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar {
+  width: 100%;
+  max-width: 48px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, var(--primary-light), var(--primary));
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.85;
+}
+
+.barLabel {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.barValue {
+  font-size: 0.65rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Orders Card */
+.ordersCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.ordersCard h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0.75rem;
+}
+
+.orderItem:last-child { border-bottom: none; }
+
+.orderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.orderId {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.orderProduct {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.orderCustomer {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.orderRight {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.orderAmount {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.statusBadge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.statusBadge.delivered { background: #d4edda; color: #155724; }
+.statusBadge.shipped { background: #cce5ff; color: #004085; }
+.statusBadge.processing { background: #fff3cd; color: #856404; }
+
+/* Products Table */
+.tableCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.tableCard h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: 600;
+}
+
+.table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: var(--bg);
+}
+
+.table tbody tr:nth-child(even) {
+  background: rgba(45, 106, 79, 0.02);
+}
+
+.productCell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.productThumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.ratingCell {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #f59e0b;
+}
+
+.stockLow { color: #dc3545; font-weight: 600; }
+.stockOk { color: var(--primary); font-weight: 600; }
+
+/* Impact + AI Bottom Row */
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Impact Card */
+.impactCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.impactCard h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.impactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.impactMetric {
+  text-align: center;
+}
+
+.circleWrap {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 0.75rem;
+  position: relative;
+}
+
+.circleSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circleBg {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 6;
+}
+
+.circleFill {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.circleValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.impactMetric p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* AI Tools Card */
+.aiCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.aiCard h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aiToolsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aiTool {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.aiTool:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 2px 8px rgba(45,106,79,0.08);
+}
+
+.aiToolIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d4edda, #a8d5ba);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.aiToolInfo {
+  flex: 1;
+}
+
+.aiToolInfo h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.aiToolInfo p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.aiToolBtn {
+  padding: 0.45rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.aiToolBtn:hover {
+  background: var(--primary-light);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .twoCol { grid-template-columns: 1fr; }
+  .bottomRow { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .statsGrid { grid-template-columns: 1fr; }
+  .welcomeCard { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+  .welcomeLeft h1 { font-size: 1.35rem; }
+  .impactGrid { grid-template-columns: 1fr; }
+  .chartArea { height: 140px; }
+  .table th, .table td { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
+  .productThumb { display: none; }
+}

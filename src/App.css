@@ -1,0 +1,10 @@
+/* App specific CSS (minimal, mostly relying on modular components and global variables) */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}

@@ -1,0 +1,91 @@
+.impactSection {
+  position: relative;
+  z-index: 20;
+  margin-top: -6rem; /* Overlap with hero section */
+  padding-bottom: 4rem;
+}
+
+.impactCard {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-floating);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 640px) {
+  .metricsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .metricsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  /* Add dividers between columns */
+  .metricsGrid > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: var(--border-color);
+  }
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.metricData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metricNumber {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+
+.metricTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.metricSubtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: 200px;
+  line-height: 1.5;
+}

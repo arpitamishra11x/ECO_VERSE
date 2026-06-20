@@ -1,0 +1,155 @@
+.makerSection {
+  padding: 4rem 0;
+  background-color: var(--white);
+}
+
+.spotlightCard {
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 1024px) {
+  .spotlightCard {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visualArea {
+  position: relative;
+  min-height: 400px;
+}
+
+@media (min-width: 1024px) {
+  .visualArea {
+    min-height: 100%;
+  }
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.playBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.playBtn:hover {
+  transform: scale(1.1);
+  background-color: var(--primary);
+}
+
+.contentArea {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contentArea {
+    padding: 4rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.makerName {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.makerJourney {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.achievementItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.achievementIcon {
+  color: var(--primary);
+}
+
+.actions {
+  margin-bottom: 3rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.gallery img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}

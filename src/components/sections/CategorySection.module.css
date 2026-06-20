@@ -1,0 +1,134 @@
+.categorySection {
+  padding: 4rem 0;
+  background-color: var(--white);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.categoryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .categoryGrid {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* For smaller screens to prevent wrapping if preferred */
+    padding-bottom: 1rem; /* For potential scrollbar */
+  }
+  
+  /* Hide scrollbar for clean look */
+  .categoryGrid::-webkit-scrollbar {
+    display: none;
+  }
+  .categoryGrid {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  width: 120px;
+}
+
+@media (min-width: 768px) {
+  .categoryCard {
+    width: 140px;
+  }
+}
+
+.imageWrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .imageWrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.categoryCard:hover .imageWrapper {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.categoryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.categoryCard:hover .categoryImage {
+  transform: scale(1.1);
+}
+
+.allProductsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.categoryCard:hover .allProductsWrapper {
+  background-color: var(--accent);
+}
+
+.categoryName {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.categoryCard:hover .categoryName {
+  color: var(--primary);
+}
