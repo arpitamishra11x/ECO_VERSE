@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Sliders, X, Leaf, Sparkles } from 'lucide-react';
 import { useEco } from '../context/EcoContext';
 import ProductCard from '../components/shared/ProductCard';
@@ -181,15 +182,22 @@ const ShopPage = () => {
           </div>
 
           {filteredProducts.length > 0 ? (
-            <div className={styles.productsGrid}>
-              {filteredProducts.map((product, idx) => (
-                <div key={product.id} onClick={() => {}}>
-                  <Link to={`/products/${product.slug}`}>
+            <motion.div layout className={styles.productsGrid}>
+              <AnimatePresence>
+                {filteredProducts.map((product, idx) => (
+                  <motion.div 
+                    key={product.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <ProductCard product={product} index={idx} />
-                  </Link>
-                </div>
-              ))}
-            </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
           ) : (
             <div className={styles.noResults}>
               <Leaf size={48} className={styles.noResultsIcon} style={{ color: 'var(--text-secondary)', marginBottom: '1rem', opacity: 0.5 }} />

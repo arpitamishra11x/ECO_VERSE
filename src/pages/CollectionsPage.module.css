@@ -198,4 +198,9 @@
 
 @media (max-width: 480px) {
   .wishlistGrid { grid-template-columns: 1fr; }
+  .page { padding: 2rem 0 3rem; }
+  .title { font-size: 1.5rem; }
+  .subtitle { font-size: 0.85rem; }
+  .header { margin-bottom: 2rem; }
+  .collage { height: 160px; }
 }

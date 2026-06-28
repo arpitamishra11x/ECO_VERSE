@@ -135,3 +135,37 @@
     min-width: 64px;
   }
 }
+
+@media (max-width: 480px) {
+  .gallery {
+    gap: 0.75rem;
+  }
+
+  .mainImageWrapper {
+    height: 240px;
+    border-radius: 0;
+  }
+
+  .zoomButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .thumbnailStrip {
+    gap: 0.25rem;
+  }
+
+  .thumbnailList {
+    gap: 0.5rem;
+  }
+
+  .thumbnail {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .arrowButton {
+    display: none;
+  }
+}

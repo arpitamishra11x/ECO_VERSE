@@ -55,6 +55,15 @@ const Footer = () => {
           </ul>
         </div>
 
+        <div className={styles.linksCol}>
+          <h3>Newsletter</h3>
+          <p className={styles.newsletterText}>Get sustainable living tips and exclusive offers.</p>
+          <form className={styles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
+            <input type="email" placeholder="Your email address" className={styles.newsletterInput} />
+            <button type="submit" className={styles.newsletterBtn}>Subscribe</button>
+          </form>
+        </div>
+
       </div>
 
       <div className={styles.bottomBar}>

@@ -349,3 +349,124 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .workshopGallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contentGrid {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .statsGrid {
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .avatar {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .backBtn {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .name {
+    font-size: 1.625rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .statVal {
+    font-size: 1.1rem;
+  }
+
+  .workshopGallery {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .galleryImg {
+    height: 180px;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .videoMock {
+    height: 160px;
+  }
+
+  .timelineNode {
+    padding-left: 1.5rem;
+  }
+
+  .actionRow {
+    flex-wrap: wrap;
+  }
+
+  .profileHeader {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar {
+    height: 180px;
+  }
+
+  .formRow {
+    gap: 1.5rem;
+  }
+
+  .reviewForm {
+    padding: 1rem;
+  }
+}

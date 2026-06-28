@@ -509,12 +509,106 @@
   .bottomRow { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .statsGrid { grid-template-columns: 1fr; }
-  .welcomeCard { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
-  .welcomeLeft h1 { font-size: 1.35rem; }
+  .welcomeCard {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .welcomeLeft h1 {
+    font-size: 1.35rem;
+  }
+  .welcomeLeft p {
+    font-size: 0.85rem;
+  }
+  .tableCard {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.25rem;
+  }
+  .table {
+    min-width: 600px;
+  }
+  .chartArea {
+    height: 160px;
+    gap: 8px;
+  }
+  .bar {
+    max-width: 36px;
+  }
+  .chartCard {
+    padding: 1.25rem;
+  }
+  .ordersCard {
+    padding: 1.25rem;
+  }
+  .impactCard {
+    padding: 1.25rem;
+  }
+  .aiCard {
+    padding: 1.25rem;
+  }
+  .impactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page {
+    padding: 1.5rem 0 3rem;
+  }
+}
+
+@media (max-width: 640px) {
   .impactGrid { grid-template-columns: 1fr; }
   .chartArea { height: 140px; }
   .table th, .table td { padding: 0.5rem 0.5rem; font-size: 0.78rem; }
   .productThumb { display: none; }
+}
+
+@media (max-width: 480px) {
+  .welcomeLeft h1 {
+    font-size: 1.15rem;
+  }
+  .welcomeCard {
+    padding: 1.25rem;
+  }
+  .welcomeBadge {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  .statCard {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  .statInfo h3 {
+    font-size: 1.25rem;
+  }
+  .statIconWrap {
+    width: 40px;
+    height: 40px;
+  }
+  .aiTool {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .aiToolBtn {
+    width: 100%;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .chartHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .circleWrap {
+    width: 72px;
+    height: 72px;
+  }
+  .circleValue {
+    font-size: 0.8rem;
+  }
+  .page {
+    padding: 1rem 0 2rem;
+  }
 }

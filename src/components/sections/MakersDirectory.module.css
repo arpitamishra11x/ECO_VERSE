@@ -278,3 +278,117 @@
   height: 24px;
   background-color: var(--border-color);
 }
+
+@media (max-width: 768px) {
+  .directorySection {
+    padding: 2.5rem 0 4rem 0;
+  }
+
+  .controlsArea {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .filtersWrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .searchBox {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .cardInfo {
+    padding: 1.25rem;
+  }
+
+  .makerName {
+    font-size: 1.1rem;
+  }
+
+  .makerDesc {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .imageContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .directorySection {
+    padding: 1.5rem 0 2.5rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .controlsArea {
+    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .dropdown {
+    padding: 0.65rem 0.875rem;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  .searchBox input {
+    padding: 0.65rem 0.875rem 0.65rem 2.25rem;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  .cardInfo {
+    padding: 1rem;
+  }
+
+  .makerName {
+    font-size: 1rem;
+  }
+
+  .makerLocation {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .makerDesc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .statsRow {
+    padding-top: 0.75rem;
+  }
+
+  .statContent strong {
+    font-size: 0.8rem;
+  }
+
+  .statContent span {
+    font-size: 0.65rem;
+  }
+
+  .imageContainer {
+    height: 180px;
+  }
+
+  .quickViewBtn {
+    padding: 0.45rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}

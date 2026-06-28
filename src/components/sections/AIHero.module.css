@@ -109,3 +109,16 @@
     font-size: 1.625rem;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .title {
+    font-size: 1.35rem;
+  }
+  .description {
+    font-size: 0.85rem;
+  }
+}

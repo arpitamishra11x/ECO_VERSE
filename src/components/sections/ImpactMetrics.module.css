@@ -89,3 +89,59 @@
   max-width: 200px;
   line-height: 1.5;
 }
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+  .impactSection {
+    margin-top: -4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .impactCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .metricsGrid {
+    gap: 2rem;
+  }
+
+  .metricNumber {
+    font-size: 2rem;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .impactSection {
+    margin-top: -3rem;
+    padding-bottom: 2rem;
+  }
+
+  .impactCard {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .metricsGrid {
+    gap: 1.5rem;
+  }
+
+  .iconWrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .metricNumber {
+    font-size: 1.75rem;
+  }
+
+  .metricTitle {
+    font-size: 0.9rem;
+  }
+
+  .metricSubtitle {
+    font-size: 0.8rem;
+    max-width: 160px;
+  }
+}

@@ -219,6 +219,23 @@
 @media (max-width: 768px) {
   .resultsGrid { grid-template-columns: repeat(2, 1fr); }
   .filtersRow { flex-direction: column; align-items: flex-start; }
+  .searchBox {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .searchTitle {
+    font-size: 1.75rem;
+  }
+  .page {
+    padding: 2rem 0 3rem;
+  }
+  .searchHeader {
+    margin: 0 auto 2rem;
+  }
+  .recentSection {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -226,4 +243,27 @@
   .aiSuggestBtn { position: static; margin-top: 1rem; width: 100%; justify-content: center; }
   .inputWrapper { flex-direction: column; align-items: stretch; }
   .searchInput { padding-right: 1.2rem; }
+  .searchBox {
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .searchTitle {
+    font-size: 1.5rem;
+  }
+  .searchDesc {
+    font-size: 0.85rem;
+  }
+  .page {
+    padding: 1.5rem 0 2rem;
+  }
+  .filterSelect {
+    min-width: 100%;
+  }
+  .pill {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  .recentItem {
+    padding: 0.5rem;
+  }
 }

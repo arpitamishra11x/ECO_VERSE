@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
@@ -8,6 +8,9 @@
 }
 
 .scrolled {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
 }
 
@@ -220,4 +223,71 @@
 .mobileNavLink:hover {
   background-color: var(--bg-color);
   color: var(--primary);
+}
+
+/* ===== Responsive: Mobile (<768px) ===== */
+@media (max-width: 768px) {
+  .headerContent {
+    height: 64px;
+  }
+
+  .logoTitle {
+    font-size: 1.25rem;
+  }
+
+  .logoTagline {
+    font-size: 0.6rem;
+  }
+
+  .logoIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .actionsArea {
+    gap: 0.5rem;
+  }
+
+  .iconButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobileNavLink {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+/* ===== Responsive: Small phones (<480px) ===== */
+@media (max-width: 480px) {
+  .headerContent {
+    height: 56px;
+  }
+
+  .logoTitle {
+    font-size: 1.1rem;
+  }
+
+  .logoTagline {
+    display: none;
+  }
+
+  .logoArea {
+    gap: 0.5rem;
+  }
+
+  .logoIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobileNavLink {
+    padding: 1rem 1.25rem;
+    font-size: 1.05rem;
+  }
 }

@@ -132,3 +132,62 @@
 .categoryCard:hover .categoryName {
   color: var(--primary);
 }
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+  .categorySection {
+    padding: 2.5rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .categoryGrid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar for clean look */
+  .categoryGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoryGrid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .categorySection {
+    padding: 2rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .categoryGrid {
+    gap: 1rem;
+  }
+
+  .categoryCard {
+    width: 100px;
+    gap: 0.75rem;
+  }
+
+  .imageWrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .categoryName {
+    font-size: 0.85rem;
+  }
+}

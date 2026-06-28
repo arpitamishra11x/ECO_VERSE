@@ -215,3 +215,30 @@
   margin-left: -10px;
   z-index: 10;
 }
+
+@media (max-width: 768px) {
+  .communitySection {
+    padding: 2.5rem 0;
+  }
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .discussionCard {
+    padding: 1rem;
+  }
+  .postTopic {
+    font-size: 1rem;
+  }
+  .postActions {
+    gap: 1rem;
+  }
+}

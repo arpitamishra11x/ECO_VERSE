@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Sparkles, Clock, X, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEco } from '../context/EcoContext';
@@ -164,13 +164,22 @@ const SearchPage = () => {
               </div>
               
               {searchResults.length > 0 ? (
-                <div className={styles.resultsGrid}>
-                  {searchResults.map((product, idx) => (
-                    <Link to={`/products/${product.slug}`} key={product.id}>
-                      <ProductCard product={product} index={idx} />
-                    </Link>
-                  ))}
-                </div>
+                <motion.div layout className={styles.resultsGrid}>
+                  <AnimatePresence>
+                    {searchResults.map((product, idx) => (
+                      <motion.div 
+                        key={product.id}
+                        layout
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ProductCard product={product} index={idx} />
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
               ) : (
                 <div style={{ textAlign: 'center', padding: '4rem 0', background: 'var(--white)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
                   <Search size={48} style={{ color: 'var(--text-secondary)', opacity: 0.3, marginBottom: '1rem' }} />

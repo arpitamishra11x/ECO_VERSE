@@ -153,3 +153,38 @@
 .gallery img:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .makerSection {
+    padding: 2.5rem 0;
+  }
+  .visualArea {
+    min-height: 300px;
+  }
+  .contentArea {
+    padding: 2.5rem 1.5rem;
+  }
+  .makerName {
+    font-size: 2rem;
+  }
+  .makerJourney {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .actions {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visualArea {
+    min-height: 240px;
+  }
+  .makerName {
+    font-size: 1.75rem;
+  }
+  .gallery img {
+    width: 60px;
+    height: 60px;
+  }
+}

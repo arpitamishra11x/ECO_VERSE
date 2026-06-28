@@ -6,7 +6,12 @@
   min-width: 220px;
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+}
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .imageWrap {
@@ -44,6 +49,37 @@
 
 .favBtn:hover {
   transform: scale(1.15);
+}
+
+.quickAddBtn {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--primary);
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .quickAddBtn {
+  bottom: 0;
+}
+
+.quickAddBtn:hover {
+  background: var(--primary);
+  color: #fff;
 }
 
 .info {
@@ -87,4 +123,69 @@
   margin-top: 0.5rem;
   font-size: 0.75rem;
   color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 180px;
+  }
+
+  .imageWrap {
+    height: 175px;
+  }
+
+  .info {
+    padding: 0.875rem;
+  }
+
+  .name {
+    font-size: 0.875rem;
+  }
+
+  .price {
+    font-size: 0.875rem;
+  }
+
+  .favBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quickAddBtn {
+    padding: 0.65rem;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 0;
+  }
+
+  .imageWrap {
+    height: 200px;
+  }
+
+  .info {
+    padding: 0.75rem;
+  }
+
+  .name {
+    font-size: 0.9rem;
+  }
+
+  .ecoBadge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .impact {
+    font-size: 0.7rem;
+  }
+
+  .favBtn {
+    width: 40px;
+    height: 40px;
+  }
 }

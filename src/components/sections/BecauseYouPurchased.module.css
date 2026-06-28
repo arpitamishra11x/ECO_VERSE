@@ -108,3 +108,26 @@
     display: none; /* Hide arrows on touch devices since they can swipe */
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .carousel {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.1rem;
+  }
+  .carousel > * {
+    min-width: 250px;
+  }
+}

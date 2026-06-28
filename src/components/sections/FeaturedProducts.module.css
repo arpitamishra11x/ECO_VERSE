@@ -190,3 +190,12 @@
 .statBadgeText {
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .featuredSection {
+    padding: 2.5rem 0;
+  }
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+}

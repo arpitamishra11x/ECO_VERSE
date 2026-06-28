@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Play } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './Hero.module.css';
 import heroImage from '../../assets/hero.png';
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+  
+  const yImage = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <section className={styles.heroSection}>
+    <section ref={ref} className={styles.heroSection}>
       <div className={`container ${styles.heroContainer}`}>
         
         {/* Left Side Content */}
         <motion.div 
           className={styles.heroContent}
+          style={{ opacity: opacityText }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -53,7 +63,12 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className={styles.imageContainer}>
-            <img src={heroImage} alt="Premium Eco Products" className={styles.mainImage} />
+            <motion.img 
+              src={heroImage} 
+              alt="Premium Eco Products" 
+              className={styles.mainImage} 
+              style={{ y: yImage }}
+            />
             
             {/* Floating Video Card */}
             <motion.div 

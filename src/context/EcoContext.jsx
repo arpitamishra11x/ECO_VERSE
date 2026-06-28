@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, AlertCircle, Info } from 'lucide-react';
 
-const EcoContext = createContext();
+const EcoContext = createContext(null);
 
 const initialProducts = [
   { id: 1, name: 'Bamboo Toothbrush', price: 99, ecoScore: 9.5, image: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&q=80', impact: 'Saves 25g Plastic', category: 'Personal Care', material: 'Bamboo', co2: 0.18, water: 1.2, stock: 15, rating: 4.8, makerId: 1, slug: 'bamboo-toothbrush' },
@@ -700,27 +702,37 @@ export const EcoProvider = ({ children }) => {
       triggerNotification
     }}>
       {children}
-      {notification && (
-        <div style={{
-          position: 'fixed',
-          bottom: '24px',
-          right: '24px',
-          background: notification.type === 'error' ? '#ef4444' : 'var(--primary)',
-          color: '#ffffff',
-          padding: '1rem 1.5rem',
-          borderRadius: 'var(--radius-md)',
-          boxShadow: 'var(--shadow-lg)',
-          zIndex: 9999,
-          fontWeight: 600,
-          fontSize: '0.9rem',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          animation: 'slideUp 0.3s ease-out'
-        }}>
-          <span>{notification.message}</span>
-        </div>
-      )}
+      <AnimatePresence>
+        {notification && (
+          <motion.div 
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+            style={{
+              position: 'fixed',
+              bottom: '24px',
+              right: '24px',
+              background: notification.type === 'error' ? '#ef4444' : notification.type === 'info' ? '#3b82f6' : 'var(--primary)',
+              color: '#ffffff',
+              padding: '1rem 1.5rem',
+              borderRadius: 'var(--radius-md)',
+              boxShadow: 'var(--shadow-floating)',
+              zIndex: 9999,
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+            }}
+          >
+            {notification.type === 'error' && <AlertCircle size={18} />}
+            {notification.type === 'info' && <Info size={18} />}
+            {notification.type !== 'error' && notification.type !== 'info' && <CheckCircle size={18} />}
+            <span>{notification.message}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </EcoContext.Provider>
   );
 };

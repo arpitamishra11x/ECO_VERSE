@@ -86,3 +86,19 @@
   z-index: 10;
   white-space: nowrap;
 }
+
+@media (max-width: 480px) {
+  .impactSection {
+    padding: 2rem 0;
+  }
+  .bannerContent {
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .bannerTitle {
+    font-size: 1.25rem;
+  }
+  .bannerSubtext {
+    font-size: 0.875rem;
+  }
+}
